@@ -1,0 +1,89 @@
+﻿body,div,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;}
+/*.body-content {padding: 20px; }*/
+.series-season-catalog li { padding: 2px; }
+.product-season { margin-top: 25px;margin-bottom: 10px; }
+.product-season label { font-size: 13pt; color: #428bca; }
+.home-thumb-img { height: 200px !important; }
+.new-series-detail { margin-top: 20px; }
+.series-label { color: #5badff; font-weight:bold; }
+.series-value { color: #47a447; font-weight: bold; }
+.favorite-btn { cursor:pointer; float:left;width:40px;height:40px;padding-left:100px; }
+.no-fav { background: url(../images/fav0.png) right no-repeat; }
+.add-fav { background: url(../images/fav1.png) right no-repeat; }
+.series-item-row { margin: 5px 0px 5px 0px;width:100%; }
+.series-item-info { float: left; vertical-align: middle; height: 40px;line-height: 40px; }
+.sep-row { width: 100%; }
+.mark_left { width: 68%; height: 40px; float:left; }
+.mark-right { background: url(../images/book_mark2.png) right no-repeat; width: 30%; height: 40px; float:right;display:none;z-index:100; }
+/*.hidden-nav { display: none; }*/
+
+.comic-foot {
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+    text-align:center;
+    width: 100%;
+    font-weight: bold;
+    color: #5badff;
+}
+.version {
+    float: left;
+    color: #008000;
+    font-weight: bold;
+    font-size: 10pt;
+    padding-left: 2px;
+    padding-top: 10px;
+}
+
+.welcome-info {
+    float: left;
+    color: #64b1ff;
+    font-weight: bold;
+    font-size: 15pt;
+    padding-left: 10px;
+}
+
+.login-name {
+    float: left;
+    color: #00df38;
+    font-weight: bold;
+    font-size: 15pt;
+    padding-left: 10px;
+}
+
+table.normal_table 
+{
+    border-collapse: collapse;
+    border:1px #c0c0c0 solid;
+    width: 100%;
+}
+
+table.normal_table th
+{
+    background-color: #18bc9c;
+    color: #ffffff;
+    border:1px #c0c0c0 solid;
+    padding: 5px;
+}
+
+table.normal_table td
+{
+    border:1px #c0c0c0 solid;
+    padding: 5px;
+    text-align: left;
+}
+
+.book-mark { margin-top: 20px; }
+
+#infoNoFavorites { margin-top: 10px;display:none; }
+#infoNoMarks { margin-top: 10px;display:none; }
+
+a{text-decoration: none;}
+ul,li{list-style: none;}
+/* 设置HTML5元素为块 */
+article， aside， details， figcaption， figure， footer， header， hgroup， menu， nav， section {
+display: block;
+}
+
+*{margin:0;padding:0;}
+body{background-color: #F8F8F8;font-family: "微软雅黑"}
+

@@ -1,0 +1,8 @@
+﻿html,body,p,img,header,ul,li,ol,div,span,em,i,b,h1,h2,h3,h4,h5,h6,dl,dd,dt{margin:0;padding: 0;}
+body { background: #000000;}
+.full-comic { display: none; }
+.full-comic img{margin:0 auto;position:fixed;width:100%;height:auto;vertical-align:middle;left:0px;}
+.message { position:absolute; position:fixed;bottom: 10px; left: 50px; display: none; color: #ff409f; font-weight:bold;z-index: 99; }
+.comic-nav { position:absolute; position:fixed;bottom: 50px; left: 0px; display: none; background: #5cb85c; color: #ffffff; width: 100%;padding: 5px 20px 5px 20px;z-index: 99; }
+.comic-nav a { text-decoration:underline;font-weight:bold; }
+#comicVolumes { display: none; position:absolute; position:fixed;bottom: 100px; left: 20px;z-index: 99; }
