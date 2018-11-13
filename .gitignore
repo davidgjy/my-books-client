@@ -1,3 +1,9 @@
+# bower install packages ignore
+bower_components/
+
+# npm install packages ignore
+node_modules/
+
 # hbuilder
 .project
 
