@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+.logo-text {
+  font-size: 17pt;
+  color: #26B99A;
+}

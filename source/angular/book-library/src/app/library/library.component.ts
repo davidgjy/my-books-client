@@ -7,11 +7,36 @@ import { BookRepository } from "../model/book.repository";
   templateUrl: "library.component.html"
 })
 export class LibraryComponent {
+  public selectedOwnner = null;
+  public booksPerPage = 4;
+  public selectedPage = 1;
+
   constructor(private repository: BookRepository) { }
+
   get books(): Book[] {
-    return this.repository.getBooks();
+    let pageIndex = (this.selectedPage - 1) * this.booksPerPage
+    return this.repository.getBooks(this.selectedOwnner)
+      .slice(pageIndex, pageIndex + this.booksPerPage);
   }
+
   get owners(): string[] {
     return this.repository.getOwners();
+  }
+
+  changeOwner(newOwner?: string) {
+    this.selectedOwnner = newOwner;
+  }
+
+  changePage(newPage: number) {
+    this.selectedPage = newPage;
+  }
+  changePageSize(newSize: number) {
+    this.booksPerPage = Number(newSize);
+    this.changePage(1);
+  }
+  get pageNumbers(): number[] {
+    return Array(Math.ceil(this.repository
+      .getBooks(this.selectedOwnner).length / this.booksPerPage))
+      .fill(0).map((x, i) => i + 1);
   }
 }
