@@ -25,18 +25,26 @@ export class LibraryComponent {
 
   changeOwner(newOwner?: string) {
     this.selectedOwnner = newOwner;
+    this.changePage(1);
   }
 
   changePage(newPage: number) {
     this.selectedPage = newPage;
   }
+
   changePageSize(newSize: number) {
     this.booksPerPage = Number(newSize);
     this.changePage(1);
   }
-  get pageNumbers(): number[] {
-    return Array(Math.ceil(this.repository
-      .getBooks(this.selectedOwnner).length / this.booksPerPage))
-      .fill(0).map((x, i) => i + 1);
+
+  get pageCount(): number {
+    return Math.ceil(this.repository
+      .getBooks(this.selectedOwnner).length / this.booksPerPage);
   }
+
+  // get pageNumbers(): number[] {
+  //   return Array(Math.ceil(this.repository
+  //     .getBooks(this.selectedOwnner).length / this.booksPerPage))
+  //     .fill(0).map((x, i) => i + 1);
+  // }
 }
