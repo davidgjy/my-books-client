@@ -1,20 +1,23 @@
-import { Component } from "@angular/core";
-import { Book } from "../model/book.model";
-import { BookRepository } from "../model/book.repository";
+import {Component} from '@angular/core';
+import {Book} from '../model/book.model';
+import {BookRepository} from '../model/book.repository';
+import {Cart} from '../model/cart.model';
 
 @Component({
-  selector: "library",
-  templateUrl: "library.component.html"
+  selector: 'library',
+  templateUrl: 'library.component.html'
 })
 export class LibraryComponent {
   public selectedOwnner = null;
   public booksPerPage = 4;
   public selectedPage = 1;
 
-  constructor(private repository: BookRepository) { }
+  constructor(private repository: BookRepository,
+              private cart: Cart) {
+  }
 
   get books(): Book[] {
-    let pageIndex = (this.selectedPage - 1) * this.booksPerPage
+    let pageIndex = (this.selectedPage - 1) * this.booksPerPage;
     return this.repository.getBooks(this.selectedOwnner)
       .slice(pageIndex, pageIndex + this.booksPerPage);
   }
@@ -47,4 +50,8 @@ export class LibraryComponent {
   //     .getBooks(this.selectedOwnner).length / this.booksPerPage))
   //     .fill(0).map((x, i) => i + 1);
   // }
+
+  addBookToCart(book: Book) {
+    this.cart.addLine(book);
+  }
 }
