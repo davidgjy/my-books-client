@@ -1,9 +1,10 @@
 <div class="float-right">
   <small>
-    Your cart:
+    你选了
     <span *ngIf="cart.itemCount > 0">
-      {{ cart.itemCount }} item(s)
-      体力值: {{ cart.cartPrice }}
+      {{ cart.itemCount }} 本书
+      &nbsp;&nbsp;
+      需要体力值: {{ cart.cartPrice }}
     </span>
     <span *ngIf="cart.itemCount == 0">
       (empty)
