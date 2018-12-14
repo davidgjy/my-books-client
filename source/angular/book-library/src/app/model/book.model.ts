@@ -6,6 +6,9 @@ export class Book {
     public owner?: string,
     public type?: string,
     public location?: string,
-    public team?: string
+    public team?: string,
+    public credit?: number
   ) { }
 }
+
+

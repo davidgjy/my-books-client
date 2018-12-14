@@ -42,7 +42,7 @@ export class Cart {
     this.cartPrice = 0;
     this.lines.forEach(l => {
       this.itemCount += l.quantity;
-      // this.cartPrice += (l.quantity * l.book.price);
+      this.cartPrice += (l.quantity * l.book.credit);
     });
   }
 }
